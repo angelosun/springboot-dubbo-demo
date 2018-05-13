@@ -24,4 +24,8 @@ dist/
 nbdist/
 .nb-gradle/
 gradlew
+<<<<<<< HEAD
 gradlew.bat
+=======
+gradlew.bat
+>>>>>>> init commit

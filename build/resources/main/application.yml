@@ -1,0 +1,36 @@
+server:
+  port: 9999
+spring:
+  application:
+    name: springboot-sample
+  jpa:
+    generate-ddl: false
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+  dubbo:
+    provider:
+      id: dubbo_base
+      token: true
+      timeout: 3000
+      retries: 0
+      delay: -1
+    application:
+      name: dubbo_demo
+    protocol:
+      port: 20884
+      name: dubbo
+    registry:
+      address: zookeeper://0.0.0.0:2181
+    consumer:
+      timeout: 3000
+      check: false
+  aop:
+    auto: true
+    proxy-target-class: true
+logging:
+  level:
+    root: INFO
+    org.hibernate: INFO
+    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
+    com.demo.component.log.LogAspect: DEBUG
